@@ -352,15 +352,17 @@ def main(win):
                         node.parent = None
 
                 if algo == "Dijkstra":
-                    last_path_steps, state["robot_pos"] = dijkstra(
+                    last_path_steps, state["robot_pos"], t, v, c = dijkstra(
                         lambda current=None: draw(win, grid, algo, steps=last_path_steps, robot_pos=current or state["robot_pos"],  state=state),
                         grid, start, end
                     )
+                    state["stats"] = {"time": t, "visited": v, "cost": c}
                 else:
-                    last_path_steps, state["robot_pos"] = a_star(
+                    last_path_steps, state["robot_pos"], t, v, c = a_star(
                         lambda current=None: draw(win, grid, algo, steps=last_path_steps, robot_pos=current or state["robot_pos"],  state=state),
                         grid, start, end
                     )
+                    state["stats"] = {"time": t, "visited": v, "cost": c}
 
 
     pygame.quit()
