@@ -19,7 +19,8 @@ A highly interactive and visually rich pathfinding visualizer using **Dijkstra's
 
 ## 📸 Screenshots
 
-> *(Add images or GIFs showing the algorithm in action with stats and animation)*
+![image](https://github.com/user-attachments/assets/52715ffc-bd91-4c58-903a-9edfb208bd38)
+
 
 ---
 
